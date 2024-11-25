@@ -22,6 +22,7 @@ const findTagBySubject = require('./routes/tags/findTagBySubject');
 
 const createSubject = require('./routes/subjects/createSubject');
 const findSubject = require('./routes/subjects/findSubject');
+const submitTest = require('./routes/tests/submitTest');
 
 
 
@@ -48,7 +49,7 @@ app.get('/tag/find/subject',checkToken,findTagBySubject);
 app.post('/subject/create',checkToken,createSubject);
 app.get('/subject/get',checkToken,findSubject);
 
-
+app.post('/tests/submit',checkToken,submitTest);
 
 
 db_user = process.env.DB_USER;
